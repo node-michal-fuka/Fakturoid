@@ -54,7 +54,7 @@ export default class Fakturoid extends Client {
     getInventoryMoves(filter?: Partial<InventoryMoveFilter>): Promise<InventoryMove[]>;
     getInventoryMove(inventoryItemId: string, id: string): Promise<InventoryMove>;
     updateInventoryMove(inventoryItemId: string, id: string, data: Partial<InventoryMove>): Promise<Partial<InventoryMove>>;
-    createInventoryMove(inventoryItemId: string, generator: Partial<InventoryMove>): Promise<Partial<InventoryMove>>;
+    createInventoryMove(inventoryItemId: string, inventoryMove: Partial<InventoryMove>): Promise<Partial<InventoryMove>>;
     deleteInventoryMove(inventoryItemId: string, id: string): Promise<undefined>;
     getTodos(filter?: Partial<TodoFilter>): Promise<Todo[]>;
 }

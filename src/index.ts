@@ -255,20 +255,13 @@ export default class Fakturoid extends Client {
             .data as InventoryMove;
     }
 
-    async updateInventoryMove(
-        inventoryItemId: string,
-        id: string,
-        data: Partial<InventoryMove>,
-    ): Promise<Partial<InventoryMove>> {
+    async updateInventoryMove(inventoryItemId: string, id: string, data: Partial<InventoryMove>,): Promise<Partial<InventoryMove>> {
         return (await super.patch(`/inventory_items/${inventoryItemId}/inventory_moves/${id}.json`, data))
             .data as InventoryMove;
     }
 
-    async createInventoryMove(
-        inventoryItemId: string,
-        generator: Partial<InventoryMove>,
-    ): Promise<Partial<InventoryMove>> {
-        return (await super.post(`/inventory_items/${inventoryItemId}/inventory_moves.json`, generator))
+    async createInventoryMove( inventoryItemId: string, inventoryMove: Partial<InventoryMove>): Promise<Partial<InventoryMove>> {
+        return (await super.post(`/inventory_items/${inventoryItemId}/inventory_moves.json`, inventoryMove))
             .data as InventoryMove;
     }
 

@@ -1,6 +1,6 @@
 {
-  "name": "fakturoid",
-  "version": "1.0.0",
+  "name": "fakturoid-ts",
+  "version": "1.0.3",
   "description": "The NodeJS interface to online accounting service Fakturoid.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

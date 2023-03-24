@@ -4,7 +4,7 @@ export default class Client {
     private readonly headers;
     private basicAuthToken;
     private _lastResponse;
-    constructor(slug: string, email: string, apiKey: string);
+    constructor(slug: string, email: string, apiKey: string, userAgent?: string);
     get(url: string, params?: {
         [key: string]: any;
     }): Promise<AxiosResponse<any> | any>;
